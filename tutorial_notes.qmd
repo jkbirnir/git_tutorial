@@ -4,12 +4,6 @@ format: html
 editor: visual
 ---
 
-## Notes on missing material
-
-The objective of this document is to go through Jordan's tutorial and add notes about where I run into problems or think some additional information would be helpful for the students.
-
-First, I think that for a comprehensive tutorial it would be helpful to add a few more items at the beginning.
-
 ### Creating a github account
 
 Go to the github [website](http://github.com)
@@ -20,15 +14,15 @@ and signup with your email and password.
 
 ![Github signup](figures/2.PNG)
 
-In the upper left hand corner on your github site create a repository for where you want files from your pending project to go. Name the repository whatever you will be calling your project. Select to have a readme file where you can post notes about the project.
+Once you have a github site, in the upper left hand corner on your github site create a repository for where you want files from your pending project to go. Name the repository whatever you will be calling your project. Select to have a readme file where you can post notes about the project. Select to make it private while you are working on int (this can be changed later).
 
 ![Github new repository](figures/3.PNG)
 
-Select to make it private while you are working on int (this can be changed later). Once you finish you new repository should look something like this:
+Once you hit crreate you new repository should look something like this:
 
 ![terminal git version](figures/4.PNG)
 
-##Getting started with git on your computer
+## Getting started with git on your computer
 
 Check if you have git installed on your computer. For this you have to use terminal to check. In your terminal write
 
@@ -38,37 +32,78 @@ and you should get back your version number.
 
 ![terminal git version](figures/8.PNG)
 
-If you do not have git on your computer you may have to install it. For instructions on how to check and install git on your computer see this very helpful [website](https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html)
+If you do not have git on your computer you may have to install it. For instructions on how to check and install git on your computer see this very helpful [website](https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html) or better yet this [manual](https://happygitwithr.com/index.html)
 
 ## Setting up your project in R studio
 
 Now that you have a github account and a local git on your computer you are ready to start working with git through R studio.
 
-Open R-studio and start a new project. Choose a project with version control: ![terminal git version](figures/5.PNG)
+Open R-studio and start a new project. Choose a project with version control:
 
-Select git as your version control. ![terminal git version](figures/6.PNG)
+![Creating a version control project](figures/5.PNG)
 
-Specify an external url that matches your username and the name of the new repository that you just created on github (Repository URL). And specify where your local git files are going to be located (Create project as subdirectory of:). ![terminal git version](figures/7.PNG)
+Select the option to clone a repository from git. What R studio will then do is to clone the repository you created on github locally on your computer.
 
-## Getting started with git
+![Cloning the git repository](figures/6.PNG)
+
+So that R-studio knows which github local repository to clone you have to specify an external url that matches your username and the name of the new repository that you just created on github (Repository URL).
+
+You also have to specify where your local git files are going to be located see (Create project as subdirectory of:).
+
+![Specifying location of external and local repositories](figures/7.PNG)
+
+Hit the create button and R studio will create a project site that should look something like this. Notice how the files replicate what is in
+
+![local files replicating external repository files](figures/9.PNG)
+
+In case you run into trouble at this stage - and are not able to connect your files make sure that your local credentials (signup email matches the email you used to signup with github). To check this you can use:
+
+```{r}
+library(usethis)
+edit_git_config()
+```
+
+Remember that you have to install the "usethis" package if it is not already on your computer.
+
+If your git and hub have no problems communicating you can set about modifying your local files at will, adding files and changing them.
+
+![Modifying local files](figures/10.PNG)
+
+Each time you add a new file in your local directory or change it in some way it will appear in your git tab like so:
+
+![Local files in Git tab](figures/11.PNG)
+
+Notice that because I have not modified the README file that was imported from github this file does not appear in my git tab.
+
+## Pushing files
+
+The next step is to commit the changes I have made to my local files to the github repository. For this purpose I have to committ the files I want to update (I only commit the files I wish to update) and then I need to push them to the external repository.
+
+To do this I first select the files that I want to commit. Next I hit the commit button.
+
+![Local files in Git tab](figures/12.PNG)
+
+When I hit the commit button another window pops up where I can write myself notes about the changes I am committing.
+
+![Commit notes](figures/13.PNG)
+
+Once I hit commit R-studio know which local files I want to change in my external depository. Note that I can work locally and commit many files and then work on other files and commit them later. The last step then is to push all my committed files to my external repository.
+
+From within my project I simply push the push button in my now empty git tab and my external repository is updated.
+
+![Pushing changes to github](figures/14.PNG)
+
+![Updated external repository](figures/15.PNG)
+
+\## Getting started with git
 
 About this section in the tutorial.
 
-Jordan.  I am a little confused about this section.  It is not clear to me whether this is instructions for associating a new project with git or if this is necessary steps for all projects?
+Jordan. I am a little confused about this section. It is not clear to me whether this is instructions for associating a new project with git or if this is necessary steps for all projects?
 
 ### Associating existing r studio projects with git?
 
 Here you should first note that they still have to create a repository on git but if they then want to associate an existing R-studio project with git these are the steps they should take.
-
-```{r}
-library(usethis)
-```
-
-<!-- Remind readers here that if they don't have the "usethis" package they should install it -->
-
-```{r}
-edit_git_config()
-```
 
 ```{r}
 #| echo: false
@@ -88,11 +123,13 @@ create_github_token()
 
 Note here that when they create this token they are asked to make a number of selections about what this token is for - which ones do they need to mark?
 
-Token:  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
+Token: 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
+
 ```{r}
 library(gitcreds) 
 gitcreds_set()
 ```
+
 Change the sentence "You'll enter..." To "You will be prompted to enter (? Enter password or token:)." This will explain where you enter the token.
 
 ## Connecting R studio projects and GitHub
