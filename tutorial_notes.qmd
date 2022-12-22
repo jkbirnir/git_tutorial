@@ -1,0 +1,108 @@
+---
+title: "git_tutorial_notes"
+format: html
+editor: visual
+---
+
+## Notes on missing material
+
+The objective of this document is to go through Jordan's tutorial and add notes about where I run into problems or think some additional information would be helpful for the students.
+
+First, I think that for a comprehensive tutorial it would be helpful to add a few more items at the beginning.
+
+### Creating a github account
+
+Go to the github [website](http://github.com)
+
+![Github website](figures/1.PNG)
+
+and signup with your email and password.
+
+![Github signup](figures/2.PNG)
+
+In the upper left hand corner on your github site create a repository for where you want files from your pending project to go. Name the repository whatever you will be calling your project. Select to have a readme file where you can post notes about the project.
+
+![Github new repository](figures/3.PNG)
+
+Select to make it private while you are working on int (this can be changed later). Once you finish you new repository should look something like this:
+
+![terminal git version](figures/4.PNG)
+
+##Getting started with git on your computer
+
+Check if you have git installed on your computer. For this you have to use terminal to check. In your terminal write
+
+git --version
+
+and you should get back your version number.
+
+![terminal git version](figures/8.PNG)
+
+If you do not have git on your computer you may have to install it. For instructions on how to check and install git on your computer see this very helpful [website](https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html)
+
+## Setting up your project in R studio
+
+Now that you have a github account and a local git on your computer you are ready to start working with git through R studio.
+
+Open R-studio and start a new project. Choose a project with version control: ![terminal git version](figures/5.PNG)
+
+Select git as your version control. ![terminal git version](figures/6.PNG)
+
+Specify an external url that matches your username and the name of the new repository that you just created on github (Repository URL). And specify where your local git files are going to be located (Create project as subdirectory of:). ![terminal git version](figures/7.PNG)
+
+## Getting started with git
+
+About this section in the tutorial.
+
+Jordan.  I am a little confused about this section.  It is not clear to me whether this is instructions for associating a new project with git or if this is necessary steps for all projects?
+
+### Associating existing r studio projects with git?
+
+Here you should first note that they still have to create a repository on git but if they then want to associate an existing R-studio project with git these are the steps they should take.
+
+```{r}
+library(usethis)
+```
+
+<!-- Remind readers here that if they don't have the "usethis" package they should install it -->
+
+```{r}
+edit_git_config()
+```
+
+```{r}
+#| echo: false
+library(usethis)
+use_git()
+```
+
+Note that after this command they need to respond to a couple of questions with a number selection. Then they should see the git tab.
+
+<!-- Include a note in the  quarto tutorial that if the git tab does not appear they may need to install Xcode and homebrew-->
+
+```{r}
+#| echo: false
+library(usethis)
+create_github_token()
+```
+
+Note here that when they create this token they are asked to make a number of selections about what this token is for - which ones do they need to mark?
+
+Token:  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
+```{r}
+library(gitcreds) 
+gitcreds_set()
+```
+Change the sentence "You'll enter..." To "You will be prompted to enter (? Enter password or token:)." This will explain where you enter the token.
+
+## Connecting R studio projects and GitHub
+
+I am a little confused here. You say "Sometimes you already have a project ...." Isn't this what we are having them do? Create a project locally and then connect it? Am I understanding you correctly that the process we just went through created the repo on github already? But if we want to take an existing project and put it on github the process in this section explains how to do that? So they should not run this code? If that is the case then perhaps put it in notes in a different way to explain that these instructions are outside the current tutorial.
+
+### Create a project As we discussed this should come first in the tutorial.
+
+##Pushing changes
+
+Explain or show a picture of the committ button. Explain that this brings up a new window where you can commit your changes.
+
+When they are working through this tutorial they will actually get a message that looks like this when they commit:
