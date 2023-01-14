@@ -111,17 +111,33 @@ This is very nice if you are working on a project - like a website that you migh
 
 # Working together in git.
 
-\## Working together in git
+One of the most useful things about github is the ability to work collaboratively.
 
-One of the most useful things about github is the ability to work to
+## Associating your RStudio with a collaborative project
 
-About this section in the tutorial.
+First, in order to work collaboratively, you may need to associate your RStudio with a project in GitHub that you did not create. If you created the project, do the following to add collaborators:
 
-Jordan. I am a little confused about this section. It is not clear to me whether this is instructions for associating a new project with git or if this is necessary steps for all projects?
+Go on the Github website to Settings \> Manage Access \> Invite a collaborator.
 
-### Associating existing r studio projects with git?
+![Inviting Github Collaborations](figures/16.PNG)
 
-Here you should first note that they still have to create a repository on git but if they then want to associate an existing R-studio project with git these are the steps they should take.
+Your teammate should accept the invite in their email.
+
+Once this is complete, you can use the steps above to associate your RStuido with the GitHub project.
+
+## Pulling Changes
+
+One important aspect of collaboration in Github is the ability to pull changes. This allows you to update your code to align with changes pushed by collaborators.
+
+Using the down arrow button, RStudio goes to the GitHub repo, grabs the most recent code and brings it into your local editor. (Pulling regularly is extremely important if you're collaborating, though if you're the only one working on an RStudio project and associated GitHub repo, you know your local code matches what's on GitHub so it's less important.)
+
+To pull, click the blue down arrow on your Git tab to see if you have changes to pull. If collaborating, you might run into merge conflicts.
+
+You can look here for other useful information for keeping good Git hygiene when collaborating: https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2
+
+# Associating existing r studio projects with git
+
+In order to associate an existing RStudio project with Git you will need to create a Git repository as described above and then follow the steps below.
 
 ```{r}
 #| echo: false
@@ -129,9 +145,7 @@ library(usethis)
 use_git()
 ```
 
-Note that after this command they need to respond to a couple of questions with a number selection. Then they should see the git tab.
-
-<!-- Include a note in the  quarto tutorial that if the git tab does not appear they may need to install Xcode and homebrew-->
+You will then get a prompt asking if you want to commit the files you've already created to your repo. Select yes (option 1). You should then also see the git tab.
 
 ```{r}
 #| echo: false
@@ -139,25 +153,13 @@ library(usethis)
 create_github_token()
 ```
 
-Note here that when they create this token they are asked to make a number of selections about what this token is for - which ones do they need to mark?
+You will then get a number of options to select about what your token use case will be. This will be project-dependent.
 
-Token: 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
+You can learn more about the selections here to help guide you in your process: https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps
 
 ```{r}
 library(gitcreds) 
 gitcreds_set()
 ```
 
-Change the sentence "You'll enter..." To "You will be prompted to enter (? Enter password or token:)." This will explain where you enter the token.
-
-## Connecting R studio projects and GitHub
-
-I am a little confused here. You say "Sometimes you already have a project ...." Isn't this what we are having them do? Create a project locally and then connect it? Am I understanding you correctly that the process we just went through created the repo on github already? But if we want to take an existing project and put it on github the process in this section explains how to do that? So they should not run this code? If that is the case then perhaps put it in notes in a different way to explain that these instructions are outside the current tutorial.
-
-### Create a project As we discussed this should come first in the tutorial.
-
-##Pushing changes
-
-Explain or show a picture of the committ button. Explain that this brings up a new window where you can commit your changes.
-
-When they are working through this tutorial they will actually get a message that looks like this when they commit:
+When prompted to enter a token or password, enter the token you just created. If you have entered one previously, you will be prompted to choose if you'd like to keep your credentials. If nothing has changed, select 1 and keep things as they are. If they have, follow the most applicable selection.
