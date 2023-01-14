@@ -89,7 +89,7 @@ When I hit the commit button another window pops up where I can write myself not
 
 ![Commit notes](figures/13.PNG)
 
-Once I hit commit R-studio knows which local files I want to change in my external depository. Note that I can work locally and commit many files and then work on other files and commit them later. The last step then is to push all my committed files to my external repository.
+Once I hit commit R-studio knows which local files I want to change in my external depository. Note that I can work locally and commit many files and then work on other files and commit them later. **Commit only commits changes to my files locally.** The last step then is to push all my locally committed files to my external repository.
 
 From within my project I simply push the push button in my now empty git tab and my external repository is updated.
 
@@ -133,7 +133,27 @@ Using the down arrow button, RStudio goes to the GitHub repo, grabs the most rec
 
 To pull, click the blue down arrow on your Git tab to see if you have changes to pull. If collaborating, you might run into merge conflicts.
 
-You can look here for other useful information for keeping good Git hygiene when collaborating: https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2
+You can look to this [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) for other useful information for keeping good Git hygiene when collaborating.
+
+Briefly the first four rules of thumb are:
+
+### **Always Pull Before a Push**
+
+#### **Pull frequently**
+
+#### **Push infrequently**
+
+#### **Commit Frequently**
+
+## Branches
+
+Additionally the [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) discusses optimal git branch for working together.
+
+#### **Merge "forward" frequently**
+
+#### **Create Pull Requests Infrequently**
+
+To better understand these
 
 # Associating existing r studio projects with git
 
@@ -155,11 +175,11 @@ create_github_token()
 
 You will then get a number of options to select about what your token use case will be. This will be project-dependent.
 
-You can learn more about the selections here to help guide you in your process: https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps
+You can learn more about the selections \[here\](https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps) to help guide you in your process.
 
 ```{r}
-library(gitcreds) 
-gitcreds_set()
+#library(gitcreds) 
+#gitcreds_set()
 ```
 
 When prompted to enter a token or password, enter the token you just created. If you have entered one previously, you will be prompted to choose if you'd like to keep your credentials. If nothing has changed, select 1 and keep things as they are. If they have, follow the most applicable selection.
