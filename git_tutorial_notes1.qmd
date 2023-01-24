@@ -171,6 +171,18 @@ You can see your branches like so:
 
 ![Seeing Branches](figures/24.png)
 
+If you click on the new branch, you will then see this as you switch:
+
+![](figures/25.png)
+
+This branch will initially not be published to the repo. You can publish it via the github website or the github desktop client.
+
+You will then see this on your github page:
+
+![](figures/26.png)
+
+If you click compare and pull requests, github will see if it can merge automatically. If it can, it will. If not, it will create a merge conflict that you must then resolve.
+
 You can look to this [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) for other useful information for keeping good Git hygiene when collaborating.
 
 Briefly the first four rules of thumb are:
