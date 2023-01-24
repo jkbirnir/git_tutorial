@@ -153,6 +153,10 @@ If you want more of an overview - then push the history button and you get a sum
 
 ![](figures/23.png) In sum this is the workflow when you and your collaborator are both working on the main project and either one of you can make changes to the project.
 
+When someone invites you to a project and to work on the main as here:
+
+![](figures/30.png)
+
 Sometimes you have a hirearchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made. In those cases you work with branches.
 
 ## Branches
@@ -171,12 +175,9 @@ You can see your branches like so:
 
 ![Seeing Branches](figures/24.png)
 
-<<<<<<< HEAD
-
 Then simply create the new branch and you're done.
-=======
+
 If you click on the new branch, you will then see this as you switch:
->>>>>>> 3c03a1e2b9f620ac2cedcdbe7e6578bcb5e297a8
 
 ![](figures/25.png)
 
