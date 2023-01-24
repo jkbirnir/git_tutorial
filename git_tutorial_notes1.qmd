@@ -137,42 +137,56 @@ When you pull your project updates to show the changes your collaborator has mad
 
 ![](figures/18.png)
 
-and 
+and
 
-![](figures/19.png)
-You can also track the changes on github if you want more details.
+![](figures/19.png) You can also track the changes on github if you want more details.
 
 Go to your github project:
 
-![](figures/20.png)
-There you see who are the collaborators and when each item was updated.  For even more information click on any of the files (here the qmd file)
+![](figures/20.png) There you see who are the collaborators and when each item was updated. For even more information click on any of the files (here the qmd file)
 
-![](figures/21.png)
-Here you see the history of the development of the project and if you want to see who made what changes when push the blame button.
+![](figures/21.png) Here you see the history of the development of the project and if you want to see who made what changes when push the blame button.
 
-![](figures/22.png)
-The blame allows you to blame whoever - mostly yourself ;) is responsible for making changes to your project.
+![](figures/22.png) The blame allows you to blame whoever - mostly yourself ;) is responsible for making changes to your project.
 
 If you want more of an overview - then push the history button and you get a summary of changes:
 
-![](figures/23.png)
-In sum this is the workflow when you and your collaborator are both working on the main project and either one of you can make changes to the project.
+![](figures/23.png) In sum this is the workflow when you and your collaborator are both working on the main project and either one of you can make changes to the project.
 
-Sometimes you have a hirearchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made.  In those cases you work with branches.
+Sometimes you have a hirearchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made. In those cases you work with branches.
 
 ## Branches
 
-In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.  You can then populate that branch the way you want and ask your associate to work on that branch only (your associate can also create a branch to be reviewed later)
+In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.
+
+![Creating a New Branch](figures/16.5.png)
+
+You can then populate that branch the way you want and ask your associate to work on that branch only (your associate can also create a branch to be reviewed later)
 
 ![](figures/17.png)
 
+Then click create and you have made the new branch.
 
+You can see your branches like so:
 
+![Seeing Branches](figures/24.png)
 
+<<<<<<< HEAD
 
 Then simply create the new branch and you're done.
+=======
+If you click on the new branch, you will then see this as you switch:
+>>>>>>> 3c03a1e2b9f620ac2cedcdbe7e6578bcb5e297a8
 
+![](figures/25.png)
 
+This branch will initially not be published to the repo. You can publish it via the github website or the github desktop client.
+
+You will then see this on your github page:
+
+![](figures/26.png)
+
+If you click compare and pull requests, github will see if it can merge automatically. If it can, it will. If not, it will create a merge conflict that you must then resolve.
 
 You can look to this [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) for other useful information for keeping good Git hygiene when collaborating.
 
@@ -185,8 +199,6 @@ Briefly the first four rules of thumb are:
 #### **Push infrequently**
 
 #### **Commit Frequently**
-
-
 
 Additionally the [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) discusses optimal git branch for working together.
 
