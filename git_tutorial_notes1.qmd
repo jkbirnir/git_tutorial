@@ -147,6 +147,10 @@ Briefly the first four rules of thumb are:
 
 ## Branches
 
+In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.
+
+![](figures/git%20branch%20picture.png)
+
 Additionally the [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) discusses optimal git branch for working together.
 
 #### **Merge "forward" frequently**
