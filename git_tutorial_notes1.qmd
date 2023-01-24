@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-# Getting started with github, git and R-studio.
+# Getting started with github, git and R-studio. 
 
 ### Creating a github account
 
