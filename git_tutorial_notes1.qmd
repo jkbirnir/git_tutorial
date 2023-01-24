@@ -162,7 +162,7 @@ Sometimes you have a hirearchy - when one of you is the lead (author for example
 
 ## Branches
 
-In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.
+In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.  You can then populate that branch the way you want and ask your associate to work on that branch only (your associate can also create a branch to be reviewed later)
 
 ![](figures/17.png)
 
@@ -170,11 +170,6 @@ In order to create new branches, go to the 'git' tab on your RStudio console and
 
 
 Then simply create the new branch and you're done.
-
-
-
-
-
 
 
 
