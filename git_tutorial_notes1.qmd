@@ -161,7 +161,7 @@ You can open the project locally as you would any other version control project 
 
 ![](figures/31.png)
 
-Once you are done changing your files locally - you then go through the same steps of committing and pushing.  Which results in this message telling you the process was successful.
+Once you are done changing your files locally - you then go through the same steps of committing and pushing. Which results in this message telling you the process was successful.
 
 ![](figures/32.png)
 
@@ -172,7 +172,6 @@ aand your changes will show up in the remote directory on github.
 ## Branches
 
 Sometimes you have a hirearchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made. In those cases you work with branches.
-
 
 In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.
 
@@ -199,7 +198,6 @@ This branch will initially not be published to the repo. You can publish it via 
 You will then see this on your github page:
 
 ![](figures/26.png)
-
 
 # Troubleshooting unintended branches
 
