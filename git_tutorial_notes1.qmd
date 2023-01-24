@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-# Getting started with github, git and R-studio. 
+# Getting started with github, git and R-studio.
 
 ### Creating a github account
 
@@ -133,6 +133,51 @@ Using the down arrow button, RStudio goes to the GitHub repo, grabs the most rec
 
 To pull, click the blue down arrow on your Git tab to see if you have changes to pull. If collaborating, you might run into merge conflicts.
 
+When you pull your project updates to show the changes your collaborator has made to the project. Look at the dates.
+
+![](figures/18.png)
+
+and 
+
+![](figures/19.png)
+You can also track the changes on github if you want more details.
+
+Go to your github project:
+
+![](figures/20.png)
+There you see who are the collaborators and when each item was updated.  For even more information click on any of the files (here the qmd file)
+
+![](figures/21.png)
+Here you see the history of the development of the project and if you want to see who made what changes when push the blame button.
+
+![](figures/22.png)
+The blame allows you to blame whoever - mostly yourself ;) is responsible for making changes to your project.
+
+If you want more of an overview - then push the history button and you get a summary of changes:
+
+![](figures/23.png)
+In sum this is the workflow when you and your collaborator are both working on the main project and either one of you can make changes to the project.
+
+Sometimes you have a hirearchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made.  In those cases you work with branches.
+
+## Branches
+
+In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.
+
+![](figures/17.png)
+
+
+
+
+Then simply create the new branch and you're done.
+
+
+
+
+
+
+
+
 You can look to this [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) for other useful information for keeping good Git hygiene when collaborating.
 
 Briefly the first four rules of thumb are:
@@ -145,13 +190,7 @@ Briefly the first four rules of thumb are:
 
 #### **Commit Frequently**
 
-## Branches
 
-In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.
-
-![](figures/git%20branch%20picture.png)
-
-Then simply create the new branch and you're done.
 
 Additionally the [article](https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2) discusses optimal git branch for working together.
 
