@@ -169,6 +169,7 @@ In order to create new branches, go to the 'git' tab on your RStudio console and
 
 
 
+
 Then simply create the new branch and you're done.
 
 
