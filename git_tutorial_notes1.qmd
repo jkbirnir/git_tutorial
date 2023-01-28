@@ -203,17 +203,17 @@ You will then see this on your github page:
 
 If you try to push when you have not pulled changes that your collaborator has made on a main branch you get the following message:
 
-![](figure/34.png)
+![](figures/34.png)
 
 If you try to pull before pushing changes that you have made to documents that your collaborator has changed you get the following warning
 
-![](figure/35.png)
+![](figures/35.png)
 
 Here the program is creating branches for you so that changes are not lost. The solution to #1 is to pull before you start making ay changes to make sure you are working on the most up to date version. The solution to #2 when you both have made changes that need to be reconciled is to
 
 a)  Committ your local changes then you receive the following message:
 
-![](figure/36.png)
+![](figures/36.png)
 
 then you pick from the options merge rebase and fast-forward
 
@@ -221,11 +221,11 @@ for a detailed explanation of the differences between the different options see 
 
 To employ the merge solution go to terminal and write:
 
-![](figure/37.png)
+![](figures/37.png)
 
 then you can pull the document. Once you pull the document you can scroll through and see where your merger conflict occurred.
 
-![](figure/38.png)
+![](figures/38.png)
 
 You then have to resolve this conflict save and now you can push.
 
