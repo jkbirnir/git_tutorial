@@ -294,6 +294,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>One important aspect of collaboration in Github is the ability to pull changes. This allows you to update your code to align with changes pushed by collaborators.</p>
 <p>Using the down arrow button, RStudio goes to the GitHub repo, grabs the most recent code and brings it into your local editor. (Pulling regularly is extremely important if you’re collaborating, though if you’re the only one working on an RStudio project and associated GitHub repo, you know your local code matches what’s on GitHub so it’s less important.)</p>
 <p>To pull, click the blue down arrow on your Git tab to see if you have changes to pull. If collaborating, you might run into merge conflicts.</p>
+<p>When you pull your project updates to show the changes your collaborator has made to the project. Look at the dates.</p>
+<p><img src="figures/18.png" class="img-fluid"></p>
+<p>and</p>
+<p><img src="figures/19.png" class="img-fluid"> You can also track the changes on github if you want more details.</p>
+<p>Go to your github project:</p>
+<p><img src="figures/20.png" class="img-fluid"> There you see who are the collaborators and when each item was updated. For even more information click on any of the files (here the qmd file)</p>
+<p><img src="figures/21.png" class="img-fluid"> Here you see the history of the development of the project and if you want to see who made what changes when push the blame button.</p>
+<p><img src="figures/22.png" class="img-fluid"> The blame allows you to blame whoever - mostly yourself ;) is responsible for making changes to your project.</p>
+<p>If you want more of an overview - then push the history button and you get a summary of changes:</p>
+<p><img src="figures/23.png" class="img-fluid"> In sum this is the workflow when you and your collaborator are both working on the main project and either one of you can make changes to the project.</p>
+<p>When someone invites you to a project and to work on the main as here:</p>
+<p><img src="figures/30.png" class="img-fluid"></p>
+<p>You can open the project locally as you would any other version control project (see earlier steps in the tutorial)</p>
+<p><img src="figures/31.png" class="img-fluid"></p>
+<p>Once you are done changing your files locally - you then go through the same steps of committing and pushing. Which results in this message telling you the process was successful.</p>
+<p><img src="figures/32.png" class="img-fluid"></p>
+<p>aand your changes will show up in the remote directory on github.</p>
+<p><img src="figures/33.png" class="img-fluid"></p>
+</section>
+<section id="branches" class="level2">
+<h2 class="anchored" data-anchor-id="branches">Branches</h2>
+<p>Sometimes you have a hirearchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made. In those cases you work with branches.</p>
+<p>In order to create new branches, go to the ‘git’ tab on your RStudio console and click ‘new branch’.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/16.5.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Creating a New Branch</figcaption><p></p>
+</figure>
+</div>
+<p>You can then populate that branch the way you want and ask your associate to work on that branch only (your associate can also create a branch to be reviewed later)</p>
+<p><img src="figures/17.png" class="img-fluid"></p>
+<p>Then click create and you have made the new branch.</p>
+<p>You can see your branches like so:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/24.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Seeing Branches</figcaption><p></p>
+</figure>
+</div>
+<p>Then simply create the new branch and you’re done.</p>
+<p>If you click on the new branch, you will then see this as you switch:</p>
+<p><img src="figures/25.png" class="img-fluid"></p>
+<p>This branch will initially not be published to the repo. You can publish it via the github website or the github desktop client.</p>
+<p>You will then see this on your github page:</p>
+<p><img src="figures/26.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="troubleshooting-unintended-branches" class="level1">
+<h1>Troubleshooting unintended branches</h1>
+<p>If you try to push when you have not pulled changes that your collaborator has made on a main branch you get the following message:</p>
+<p><img src="figure/34.png" class="img-fluid"></p>
+<p>If you try to pull before pushing changes that you have made to documents that your collaborator has changed you get the following warning</p>
+<p><img src="figure/35.png" class="img-fluid"></p>
+<p>Here the program is creating branches for you so that changes are not lost. The solution to #1 is to pull before you start making ay changes to make sure you are working on the most up to date version. The solution to #2 when you both have made changes that need to be reconciled is to</p>
+<ol type="a">
+<li>Committ your local changes then you receive the following message:</li>
+</ol>
+<p><img src="figure/36.png" class="img-fluid"></p>
+<p>then you pick from the options merge rebase and fast-forward</p>
+<p>for a detailed explanation of the differences between the different options see for example this <a href="https://frontend.turing.edu/lessons/module-3/merge-vs-rebase.html?ads_cmpid=6451354298&amp;ads_adid=76255849919&amp;ads_matchtype=&amp;ads_network=g&amp;ads_creative=517671727591&amp;utm_term=&amp;ads_targetid=dsa-19959388920&amp;utm_campaign=&amp;utm_source=adwords&amp;utm_medium=ppc&amp;ttv=2&amp;gclid=CjwKCAiAoL6eBhA3EiwAXDom5hB7rNI86O5HQq3UFkG9tY7t8uBDicj5fL9lc9K_JCyjvZYKz-Wm-RoC97kQAvD_BwE">website</a></p>
+<p>To employ the merge solution go to terminal and write:</p>
+<p><img src="figure/37.png" class="img-fluid"></p>
+<p>then you can pull the document. Once you pull the document you can scroll through and see where your merger conflict occurred.</p>
+<p><img src="figure/38.png" class="img-fluid"></p>
+<p>You then have to resolve this conflict save and now you can push.</p>
+</section>
+<section id="good-git-hygene" class="level1">
+<h1>Good git hygene</h1>
 <p>You can look to this <a href="https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2">article</a> for other useful information for keeping good Git hygiene when collaborating.</p>
 <p>Briefly the first four rules of thumb are:</p>
 <section id="always-pull-before-a-push" class="level3">
@@ -306,12 +374,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="commit-frequently" class="level4">
 <h4 class="anchored" data-anchor-id="commit-frequently"><strong>Commit Frequently</strong></h4>
-</section>
-</section>
-</section>
-<section id="branches" class="level2">
-<h2 class="anchored" data-anchor-id="branches">Branches</h2>
 <p>Additionally the <a href="https://betterprogramming.pub/six-rules-for-good-git-hygiene-5006cf9e9e2">article</a> discusses optimal git branch for working together.</p>
+</section>
 <section id="merge-forward-frequently" class="level4">
 <h4 class="anchored" data-anchor-id="merge-forward-frequently"><strong>Merge “forward” frequently</strong></h4>
 </section>
@@ -345,6 +409,10 @@ Github/Git_tutorial/git_tutorial'</code></pre>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#gitcreds_set()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>When prompted to enter a token or password, enter the token you just created. If you have entered one previously, you will be prompted to choose if you’d like to keep your credentials. If nothing has changed, select 1 and keep things as they are. If they have, follow the most applicable selection.</p>
+</section>
+<section id="optional-github-desktop-client" class="level1">
+<h1>Optional: Github Desktop Client</h1>
+<p>A lot of problems can be resolved by examining the Github desktop client. It’s free and you can download it from the Github website.</p>
 </section>
 
 </main>
