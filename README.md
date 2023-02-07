@@ -30,9 +30,9 @@ You will need to create a Github account. Let’s do that first.
 Go to the github [website](http://github.com) and signup with your email
 and password.
 
-![Github website](figures/1.PNG)
+![Github website](figures/1.png)
 
-![Github signup](figures/2.PNG)
+![Github signup](figures/2.png)
 
 Once you have a github site, in the upper left hand corner on your
 github site create a **repository** (‘repo’ for short) for where you
@@ -44,11 +44,11 @@ learn how to make a `README.Rmd` file that will automatically sync with
 the `README.md` file of your project). Select to make your repository
 private while you are working on it (this can be changed later).
 
-![Github new repository](figures/3.PNG)
+![Github new repository](figures/3.png)
 
 Once you hit create you new repository should look something like this:
 
-![terminal git version](figures/4.PNG)
+![terminal git version](figures/4.png)
 
 ## Getting started with git on your computer
 
@@ -86,7 +86,7 @@ use terminal to check. In your `terminal` write
 
 and you should get back your version number.
 
-![terminal git version](figures/8.PNG)
+![terminal git version](figures/8.png)
 
 If you do not have git on your computer you may have to install it. For
 instructions on how to check and install git on your computer see this
@@ -200,16 +200,16 @@ git through R studio.
 - Click on the green `<> Code` button to see the URL for the repo
 - Copy the URL
 
-![URL from Github Repo](figures/6a.PNG)
+![URL from Github Repo](figures/6a.png)
 
 - Open R-studio and start a new project.
 - Choose a project with version control:
 
-![Creating a version control project](figures/5.PNG)
+![Creating a version control project](figures/5.png)
 
 - Select the option to clone a repository from git.
 
-![Cloning the git repository](figures/6.PNG)
+![Cloning the git repository](figures/6.png)
 
 - Paste the URL from the Github repo you copied earlier
 - The `project directory name` should auto-populate with the same name
@@ -230,13 +230,13 @@ the new repository that you just created on github (Repository URL).
 You also have to specify where your local git files are going to be
 located see (Create project as subdirectory of:).
 
-![Specifying location of external and local repositories](figures/7.PNG)
+![Specifying location of external and local repositories](figures/7.png)
 
 Hit the create button and R studio will create a project that should
 look something like this. Notice how the files replicate what is in the
 Github repo
 
-![local files replicating external repository files](figures/9.PNG)
+![local files replicating external repository files](figures/9.png)
 
 In case you run into trouble at this stage - and are not able to connect
 your files make sure that your local credentials. To check this you can
@@ -257,12 +257,12 @@ If your git, github, and RStudio have no problems communicating you can
 set about modifying your local files at will, adding files and changing
 them.
 
-![Modifying local files](figures/10.PNG)
+![Modifying local files](figures/10.png)
 
 Each time you add a new file in your local directory or change it in
 some way it will appear in your git tab like so:
 
-![Local files in Git tab](figures/11.PNG)
+![Local files in Git tab](figures/11.png)
 
 - Notice that because I have not modified the README file that was
   imported from github this file does not appear in my git tab.
@@ -294,7 +294,7 @@ need to push them to the external repository.
 To do this I first select the files that I want to commit. Next I hit
 the commit button.
 
-![Local files in Git tab](figures/12.PNG)
+![Local files in Git tab](figures/12.png)
 
 When I hit the commit button another window pops up where I can write
 myself notes about the changes I am committing. Write something useful
@@ -302,7 +302,7 @@ and brief that explains what you have done or should do next. - Green
 signifies what is new and will commit; - Red signifies deletion/changes
 made. - Review changes before you click commit
 
-![Commit notes](figures/13.PNG)
+![Commit notes](figures/13.png)
 
 Once I hit commit R-studio knows which local files I want to change in
 my external depository. Note that I can work locally and commit many
@@ -313,9 +313,9 @@ my locally committed files to my external repository.
 From within my project I simply push the green push button in my now
 empty git tab and my external repository is updated.
 
-![Pushing changes to github](figures/14.PNG)
+![Pushing changes to github](figures/14.png)
 
-![Updated external repository](figures/15.PNG)
+![Updated external repository](figures/15.png)
 
 Github then tracks all of the changes in each file and new files added
 in each commit while also updating the main file.
@@ -396,7 +396,7 @@ the project, do the following to add collaborators:
 Go on the Github website to Settings \> Manage Access \> Invite a
 collaborator.
 
-![Inviting Github Collaborations](figures/16.PNG)
+![Inviting Github Collaborations](figures/16.png)
 
 Your teammate should accept the invite in their email.
 
