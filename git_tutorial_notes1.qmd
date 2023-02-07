@@ -1,6 +1,6 @@
 ---
 title: "git_tutorial_notes"
-format: pdf
+format: html
 editor: visual
 ---
 
@@ -77,6 +77,15 @@ Each time you add a new file in your local directory or change it in some way it
 
 Notice that because I have not modified the README file that was imported from github this file does not appear in my git tab.
 
+## Authenticating with github
+
+While github will allow R studio to pull files from existing github repositories github will not allow R studio to push changes without first authenticating the user (this is a new requirement so if you have an old github account you may be able to skip this step).
+
+For this purpose follow theses steps
+
+
+
+
 ## Pushing files
 
 The final step is to commit the changes I have made to my local files to the github repository. For this purpose I have to commit the files I want to update (I only commit the files I wish to update) and then I need to push them to the external repository.
@@ -107,7 +116,9 @@ This is very nice if you are working on a project - like a website that you migh
 
 ### Create a github account
 
-### Create a version control project in R studio and upload it to Github
+### Create a version control project in R studio and pull documents from the github websit
+
+### Add projects in R studio and upload them to the gihub repository (using commit and push)
 
 # Working together in git.
 
@@ -171,7 +182,7 @@ aand your changes will show up in the remote directory on github.
 
 ## Branches
 
-Sometimes you have a hirearchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made. In those cases you work with branches.
+Sometimes you have a hierarchy - when one of you is the lead (author for example, or if you are working with an RA etc). where you want to review and approve any changes before they are made. In those cases you work with branches.
 
 In order to create new branches, go to the 'git' tab on your RStudio console and click 'new branch'.
 
@@ -201,10 +212,12 @@ You will then see this on your github page:
 
 # Exercises
 
-### Start a github project with some documents 
+### Start a github project on the github website with some documents
+
 ### Invite your partner to join
 
-### Pull your partner's documents, 
+### Pull your partner's documents,
+
 ### Edit the documents, commit the changes and push changes to their project
 
 # Troubleshooting unintended branches
