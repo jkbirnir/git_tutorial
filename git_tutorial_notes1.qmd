@@ -81,10 +81,14 @@ Notice that because I have not modified the README file that was imported from g
 
 While github will allow R studio to pull files from existing github repositories github will not allow R studio to push changes without first authenticating the user (this is a new requirement so if you have an old github account you may be able to skip this step).
 
-For this purpose follow theses steps
+For this purpose follow theses steps:
 
+First, generate a github token to be used with your repo:
 
-
+```{r}
+library(usethis)
+usethis::create_github_token()
+```
 
 ## Pushing files
 
