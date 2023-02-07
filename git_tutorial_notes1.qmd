@@ -1,6 +1,6 @@
 ---
 title: "git_tutorial_notes"
-format: html
+format: pdf
 editor: visual
 ---
 
@@ -201,9 +201,11 @@ You will then see this on your github page:
 
 # Exercises
 
-## Start a github project with some documents and invite your partner to join
+### Start a github project with some documents 
+### Invite your partner to join
 
-## Pull your partner's documents, edit the documents, commit the changes and push changes to their project
+### Pull your partner's documents, 
+### Edit the documents, commit the changes and push changes to their project
 
 # Troubleshooting unintended branches
 
