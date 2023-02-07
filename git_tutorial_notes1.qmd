@@ -199,6 +199,12 @@ You will then see this on your github page:
 
 ![](figures/26.png)
 
+# Exercises
+
+## Start a github project with some documents and invite your partner to join
+
+## Pull your partner's documents, edit the documents, commit the changes and push changes to their project
+
 # Troubleshooting unintended branches
 
 If you try to push when you have not pulled changes that your collaborator has made on a main branch you get the following message:
