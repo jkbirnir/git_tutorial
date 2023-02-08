@@ -83,12 +83,62 @@ While github will allow R studio to pull files from existing github repositories
 
 For this purpose follow theses steps:
 
-First, generate a github token to be used with your repo:
+**Step 1** - Make sure you are logged in to your Github account on your
+browser.
 
-```{r}
-library(usethis)
+**Step 2** - Run the following code. After you do, your browser should
+pop up on Github on the page where you create a Personal Access Token
+(PAT);
+
+``` r
+# If not already installed, install these packages
+install.packages("devtools", "gitcreds")
+
 usethis::create_github_token()
 ```
+
+- create the token in Github (in the browser)
+- copy the PAT to your clipboard
+- Leave the window open for the time being
+
+**Step 3**
+
+- Run this function in the console in RStudio;
+
+```{r}
+
+gitcreds::gitcreds_set()
+```
+
+- A list of options should present in the console
+- The output from the console in RStudio should look something like
+  this…
+
+    > gitcreds::gitcreds_set()
+
+    -> Your current credentials for 'https://github.com':
+
+    protocol: https
+    host    : github.com
+    username: your_username
+    password: <-- hidden -->
+
+    -> What would you like to do?
+
+    1: Abort update with error, and keep the existing credentials
+    2: Replace these credentials
+    3: See the password / token
+
+    Selection:
+
+Enter ‘2’ in the console and press enter.
+
+- enter in the Personal Access Token from your clipboard (paste in the
+  console)
+- press enter.
+
+You should be able to push your commits to your Github repo and pull
+from the repo down the RStudio project on your local computer now.
 
 ## Pushing files
 
